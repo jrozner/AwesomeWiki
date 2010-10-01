@@ -29,12 +29,16 @@ module Grities
   end
 
   
-  def traverse_tree(tree, name = [], contents = {})
-    if tree.name.nil?
-      name << '/'
-      contents['/'] = tree.blobs
-      name.clear
+  def root_contents_of(tree)
+    if tree.name.nil? && !tree.blobs.empty?
+      { '/' => tree.blobs }
+    else
+      {}
     end
+  end
+
+  def traverse_tree(tree, name = [], contents = {})
+    contents.merge! root_contents_of(tree)
 
     if tree.trees.empty?
       name << tree.name
