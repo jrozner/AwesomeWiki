@@ -27,25 +27,14 @@ module Grities
     end
     ret.uniq!
   end
-
   
-  def root_contents_of(tree)
-    if tree.name.nil? && !tree.blobs.empty?
-      { '/' => tree.blobs }
-    else
-      {}
-    end
-  end
-
-  def traverse_tree(tree, name = [], contents = {})
-    contents.merge! root_contents_of(tree)
-
+  def traverse_tree(tree, name = "", contents = {})
     if tree.trees.empty?
       name << tree.name
-      contents[name.join('/')] = tree.blobs
+      contents[name] = tree.blobs
       name.clear
     else
-      name << tree.name
+      tree.name.nil? ? (contents['/'] = tree.blobs) : (name << tree.name)
       tree.trees.each do |tree|
         traverse_tree(tree, name, contents)
       end
