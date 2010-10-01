@@ -1,5 +1,8 @@
 module Grities
 
+  # TODO:
+  # Document me
+  # Refactor me
   def authors(repo, name)
     r     = {}
     ret   = []
@@ -26,8 +29,10 @@ module Grities
       end
     end
     ret.uniq!
-  end
-  
+  end 
+
+  # TODO: 
+  # Document me.
   def traverse_tree(tree, name = "", contents = {})
     if tree.trees.empty?
       name << tree.name
