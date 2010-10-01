@@ -1,0 +1,14 @@
+<% @contents.keys.each do |sublocation| %>
+
+    <h3> <%= sublocation %> </h3> 
+    
+    <% @contents[sublocation].each do |topic| %>
+      <% link = File.join(request.path, sublocation, topic.name) %>
+        <ul>
+          <li/> <a href="<%= link %>"><%= topic.name %></a>
+        </ul>
+    <% end %>
+
+  <% end %>
+
+

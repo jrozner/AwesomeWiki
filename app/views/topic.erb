@@ -1,0 +1,15 @@
+<div id="author_area">
+  
+  <b> Authors </b>
+    <% @authors.each do |commit| %>
+      <ul class="author">
+        <li/> <img src="http://www.gravatar.com/avatar/<%= commit[:email] %>?s=20/>"
+        <li/><%= commit[:name] %>
+      </ul>
+    <% end %>
+
+</div>
+
+<div class="clear"> </div>
+
+<%= @text %>

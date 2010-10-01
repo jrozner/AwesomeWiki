@@ -1,0 +1,110 @@
+body {
+  font-size         : 13.34px;
+  font-family       : verdana, sans-serif;
+  background-color : #f8f8f8;
+}
+
+body div#content { 
+  margin            : 0 auto;
+  width             : 920px;
+  background-color  : #FFF;
+  padding           : .7em;
+  border            : 1px #E0E0E0 solid; 
+}
+
+body div#content div.clear {
+  clear : both;
+}
+body div#content div#float-right {
+  float : right;
+}
+
+body div#content div#float-right a {
+  display : block;
+  float   : left;
+  width   : 50px;
+  color   : #CC0;
+}
+
+body div#content div#float-right a:hover {
+  font-style :italic;
+}
+
+body div#content h1, body div#content h2, div#content h3, div#content h4 {
+  padding-top     : 10px;
+  border-bottom   : 1px solid #E0E0E0;
+  color           : #000;
+}
+
+body div#content pre {
+  padding          : 5px;
+  border-style     : solid;
+  border-width     : 1px;
+  border-color     : #E0E0E0;
+  background-color : #F8F8FF;
+}
+
+body div#content pre code {
+  padding          : 5px;
+  background-color : #F8F8FF;
+  border           : none;
+}
+
+body div#content code {
+  font-family      : courier, fixed;
+  display          : inline-block;
+  padding          : 0px 2px 0px 2px;
+  background-color : #F8F8FF;
+  border           : 1px #E0E0E0 solid;
+}
+
+body h4#title {
+  font-family : verdana, sans-serif;
+  display     : block;
+  margin      : 0 auto;
+  width       : 920px;
+}
+
+body a:link, body a:visited, body a:active, body a:hover {
+  color : blue;
+}
+
+body #content ul{
+  list-style-type :circle;
+} 
+
+body #content ul li {
+  margin  : 0px;
+  padding : 0px;
+}
+
+body #content ul li.hide {
+  list-style-type : none;
+}
+
+body #content #author_area {
+  margin-top   : 20px;
+  text-align   : right;
+  float        : right;
+  border       : 1px #E0E0E0 solid;
+}
+
+body #content ul.author {
+  margin-top : 3px;
+  padding-top : 0px;
+  list-style-type :none;
+}
+
+body #content ul.author li {
+  float : left;
+}
+
+body #footer {
+  margin      : 0 auto;
+  width       : 920px;
+  
+  line-height : 60px;
+  text-align  : center;
+}
+
+
