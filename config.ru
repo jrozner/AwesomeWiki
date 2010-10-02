@@ -1,14 +1,14 @@
-require('rubygems')
-require('sinatra')
-require('grit')
-require('grities')
-require('kramdown')
-require('digest')
+require 'rubygems'
+require 'sinatra'
+require 'kramdown'
+require 'grit'
+require 'digest'
+require File.expand_path(File.dirname(__FILE__)) + '/lib/Grities'
 
 controllers = Dir.glob("app/controller/*.rb") 
 
 controllers.each do |controller|
-  require(controller)
+  require "#{File.expand_path(File.dirname(__FILE__))}/#{controller}"
 end
 
 map('/') do
